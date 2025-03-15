@@ -15,3 +15,6 @@ with st.expander('**Data**'):
   st.write('**y**')
   y = df['HeartDisease']
   y
+
+with st.expander('**Data Visualization**'):
+  st.scatter_chart(data=df, x = 'Cholesterol', y = 'RestingBP', color='HeartDisease')
