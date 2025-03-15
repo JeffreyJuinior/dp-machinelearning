@@ -17,4 +17,4 @@ with st.expander('**Data**'):
   y
 
 with st.expander('**Data Visualization**'):
-  st.scatter_chart(data=df, x = 'Cholesterol', y = 'RestingBP', color='HeartDisease')
+  st.scatter_chart(data=df, x = 'Height', y = 'Weight', color='NObeyesdad')
