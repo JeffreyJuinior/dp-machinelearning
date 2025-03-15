@@ -28,6 +28,9 @@ def main():
     st.scatter_chart(data=df, x = 'Height', y = 'Weight', color='NObeyesdad')
   
   # Input Data
+  Age = st.slider('Age', min_value = 14, max_value = 61, value = 24)
+  
+  
 
 if __name__ == "__main__":
   main()
