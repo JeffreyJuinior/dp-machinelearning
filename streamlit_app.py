@@ -6,6 +6,17 @@ model = joblib.load('trained_model.pkl')
 loaded_encoder = joblib.load('encoder.pkl')
 loeaded_scaler = joblib.load('scaler.pkl')
 
+def inpput_to_df(input):
+  data = [input]
+  df = pd.DataFrame(data, columns = ['Gender', 'Age', 'Height', 'Weight', 'family_history_with_overweight', 'FAVC', 'FCVC', 'NCP', 'CAEC', 'SMOKE', 'CH2O', 'SCC', 'FAF', 'TUE', 'CALC', 'MTRANS'])
+  return df
+
+def encode(df):
+  for column in df.columns:
+    if df[column].dtype == "object":
+      df[column] = loaded_encoder.fit_transform(df[column])
+  return df
+
 def main():
   st.title('Machine Learning App')
   
