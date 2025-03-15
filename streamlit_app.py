@@ -29,5 +29,5 @@ def main():
   
   # Input Data
 
-def __input__ == "__main__":
+def __name__ == "__main__":
   main()
