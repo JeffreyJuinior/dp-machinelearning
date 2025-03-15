@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-model = joblib.load('trained_model.pkl')
+model = joblib.load('trained_model123.pkl')
 loaded_encoder = joblib.load('encoder.pkl')
 loeaded_scaler = joblib.load('scaler.pkl')
 
