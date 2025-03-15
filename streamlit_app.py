@@ -86,7 +86,7 @@ def main():
                                       4:'Obesity Type I', 
                                       5:'Obesity Type II', 
                                       6: 'Obesity Type III'})
-  
+  df_prediction_proba
   st.write('The predicted output is: ',prediction) 
   
 
