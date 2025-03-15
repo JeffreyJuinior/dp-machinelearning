@@ -75,7 +75,20 @@ def main():
   df = encode(df)
   df = normalize(df)
   prediction = predict_with_model(model, df)
+  
+  prediction_proba = model.predict_proba(df)
+  df_prediction_proba = pd.DataFrame(prediction_proba)
+  df_prediction_proba.columns = ['Insufficient Weight', 'Normal Weight', 'Overweight Level I', 'Overweight Level II', 'Obesity Type I', 'Obesity Type II', 'Obesity Type III']
+  df_prediction_proba.rename(columns={0: 'Insufficient Weight', 
+                                      1:'Normal Weight', 
+                                      2: 'Overweight Level I', 
+                                      3: 'Overweight Level II', 
+                                      4:'Obesity Type I', 
+                                      5:'Obesity Type II', 
+                                      6: 'Obesity Type III')
+  
   st.write('The predicted output is: ',prediction) 
+  
 
 if __name__ == "__main__":
   main()
