@@ -37,6 +37,7 @@ def main():
   FAF = st.slider('FAF', min_value = 0, max_value = 3, value = 1)
   TUE = st.slider('TUE', min_value = 0, max_value = 2, value = 1)
   
+  Gender = st.selecbox('Gender', ('Male', 'Female'))
   
   
 
