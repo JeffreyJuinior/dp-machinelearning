@@ -1,5 +1,8 @@
 import streamlit as st
+import joblib
 import pandas as pd
+
+model = joblib.load('trained_model.pkl')
 
 st.title('Machine Learning App')
 
@@ -15,6 +18,8 @@ with st.expander('**Data**'):
   st.write('**y**')
   y = df['NObeyesdad']
   y
+
+
 
 with st.expander('**Data Visualization**'):
   st.scatter_chart(data=df, x = 'Height', y = 'Weight', color='NObeyesdad')
