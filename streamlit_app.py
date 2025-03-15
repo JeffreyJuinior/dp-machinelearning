@@ -68,6 +68,8 @@ def main():
   # Input Data for Program
   user_input = [Gender, Age, Height, Weight, family_history_with_overweight, FAVC, FCVC, NCP, CAEC, SMOKE, CH2O, SCC, FAF, TUE, CALC, MTRANS]
   df = input_to_df(user_input)
+
+  st.write('Data input by user')
   df
 
 if __name__ == "__main__":
