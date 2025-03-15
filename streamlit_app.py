@@ -38,7 +38,13 @@ def main():
   TUE = st.slider('TUE', min_value = 0, max_value = 2, value = 1)
   
   Gender = st.selectbox('Gender', ('Male', 'Female'))
-  
+  family_history_with_overweight = st.selectbox('Family history with overweight', ('yes', 'no'))
+  FAVC = st.selectbox('FAVC', ('yes', 'no'))
+  CAEC = st.selectbox('CAEC', ('Sometimes', 'Frequently', 'Always', 'no'))
+  SMOKE = st.selectbox('SMOKE', ('yes', 'no'))
+  SCC = st.selectbox('SCC', ('yes', 'no'))
+  CALC = st.selectbox('CALC', ('Sometimes', 'no', 'Frequently', 'Always'))
+  MTRANS = st.selectbox('MTRANS', ('Public_Transportation', 'Automobile', 'Walking', 'Motorbike', 'Bike'))
   
 
 if __name__ == "__main__":
