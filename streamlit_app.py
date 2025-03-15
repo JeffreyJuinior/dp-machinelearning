@@ -29,6 +29,14 @@ def main():
   
   # Input Data
   Age = st.slider('Age', min_value = 14, max_value = 61, value = 24)
+  Height = st.slider('Height', min_value = 1.45, max_value = 1.98, value = 1.7)
+  Weight = st.slider('Weight', min_value = 39, max_value = 173, value = 86)
+  FCVC = st.slider('FCVC', min_value = 1, max_value = 3, value = 2)
+  NCP = st.slider('NCP', min_value = 1, max_value = 4, value = 3)
+  CH2O = st.slider('CH2O', min_value = 1, max_value = 3, value = 2)
+  FAF = st.slider('FAF', min_value = 0, max_value = 3, value = 1)
+  TUE = st.slider('TUE', min_value = 0, max_value = 2, value = 1)
+  
   
   
 
