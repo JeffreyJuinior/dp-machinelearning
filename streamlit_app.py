@@ -13,5 +13,5 @@ with st.expander('**Data**'):
   X = df.drop('HeartDisease',axis=1)
   X
   st.write('**y**')
-  y = df.HeartDisease
+  y = df['HeartDisease']
   y
