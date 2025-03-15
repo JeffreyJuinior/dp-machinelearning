@@ -4,7 +4,7 @@ import pandas as pd
 
 model = joblib.load('trained_model.pkl')
 loaded_encoder = joblib.load('encoder.pkl')
-loeaded_scaler = joblib.load('scaler.pkl')
+loaded_scaler = joblib.load('scaler.pkl')
 
 def inpput_to_df(input):
   data = [input]
@@ -16,6 +16,14 @@ def encode(df):
     if df[column].dtype == "object":
       df[column] = loaded_encoder.fit_transform(df[column])
   return df
+
+def normalize(df):
+  df = loaded_scaler.transform(df)
+  return df
+
+def predict_with_model(model, user_input):
+  prediction = model.predict(user_input)
+  return prediction[0]
 
 def main():
   st.title('Machine Learning App')
@@ -38,7 +46,7 @@ def main():
   with st.expander('**Data Visualization**'):
     st.scatter_chart(data=df, x = 'Height', y = 'Weight', color='NObeyesdad')
   
-  # Input Data
+  # Input Data bu User
   Age = st.slider('Age', min_value = 14, max_value = 61, value = 24)
   Height = st.slider('Height', min_value = 1.45, max_value = 1.98, value = 1.7)
   Weight = st.slider('Weight', min_value = 39, max_value = 173, value = 86)
@@ -56,7 +64,9 @@ def main():
   SCC = st.selectbox('SCC', ('yes', 'no'))
   CALC = st.selectbox('CALC', ('Sometimes', 'no', 'Frequently', 'Always'))
   MTRANS = st.selectbox('MTRANS', ('Public_Transportation', 'Automobile', 'Walking', 'Motorbike', 'Bike'))
-  
+
+  # Input Data for Program
+  user_input = ['Gender', 'Age', 'Height', 'Weight', 'family_history_with_overweight', 'FAVC', 'FCVC', 'NCP', 'CAEC', 'SMOKE', 'CH2O', 'SCC', 'FAF', 'TUE', 'CALC', 'MTRANS']
 
 if __name__ == "__main__":
   main()
