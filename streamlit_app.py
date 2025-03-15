@@ -10,7 +10,7 @@ with st.expander('**Data**'):
   df = pd.read_csv('https://raw.githubusercontent.com/JeffreyJuinior/dp-machinelearning/refs/heads/master/heart.csv')
   df
   st.write('**X**')
-  X = df.drop('HearDisease')
+  X = df.drop('HearDisease',axis=1)
   X
   st.write('**y**')
   y = df['HearDisease']
