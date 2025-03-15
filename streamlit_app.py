@@ -74,7 +74,7 @@ def main():
 
   df = encode(df)
   df = normalize(df)
-  prediction = predict_with_mode(model, df)
+  prediction = predict_with_model(model, df)
   st.write('The predicted output is: ',prediction) 
 
 if __name__ == "__main__":
