@@ -72,5 +72,10 @@ def main():
   st.write('Data input by user')
   df
 
+  df = encode(df)
+  df = normalize(df)
+  prediction = predict_with_mode(model, df)
+  st.write('The predicted output is: ',prediction) 
+
 if __name__ == "__main__":
   main()
