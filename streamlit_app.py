@@ -3,6 +3,8 @@ import joblib
 import pandas as pd
 
 model = joblib.load('trained_model.pkl')
+loaded_encoder = joblib.load('encoder.pkl')
+loeaded_scaler = joblib.load('scaler.pkl')
 
 st.title('Machine Learning App')
 
